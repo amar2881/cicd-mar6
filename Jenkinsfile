@@ -9,11 +9,11 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage ('tools') {
+        tools {
         maven 'apache-maven-3.0.1' 
     }
     }
-        stage('Example') {
+        Example {
             steps {
                 sh 'mvn --version'
             }
